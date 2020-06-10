@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'finalproject'
+    'meetup'
 ]
 
 MIDDLEWARE = [
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'finalproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE' : 'django.db.backends.sqlite3',
+        'NAME' : 'finaldb',
+        'USER' : 'postgres',
+        'PASSWORD' : 'P@ssw0rd1',
+        'HOST' : 'localhost',
+        'PORT' : '',
     }
 }
 
@@ -117,5 +121,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
+#---------------------------
 STATIC_URL = '/static/'
+#---------------------------
+STATIC_ROOT = os.path.join(BASE_DIR, 'root')
+#---------------------------
+STATICFILES_DIR = [
+    os.path.join(BASE_DIR, 'static'),
+]
+#---------------------------
