@@ -8,7 +8,7 @@ class MeetUp(models.Model):
 	meetup_time = models.TimeField()
 	meetup_location = models.CharField(max_length=255)
 	meetup_desc = models.CharField(max_length=255)
-    user_id = models.ForeignKey(User, on_delete = models.DO_NOTHING)
+	user_id = models.ForeignKey(User, on_delete = models.DO_NOTHING)
 
 	# meeting_id = models.IntegerField(primary_key=True)
 	def __str__(self):
