@@ -21,3 +21,14 @@ def getmeetup(request):
 def getactivity(request):
     activity_list=Activity.objects.all()
     return render (request, 'meetup/activity.html',{'activity_list': activity_list,})
+
+
+
+
+
+
+def loginmessage(request):
+    return render(request, 'meetup/loginmessage.html')
+
+def logoutmessage(request):
+    return render(request, 'meetup/logoutmessage.html')
