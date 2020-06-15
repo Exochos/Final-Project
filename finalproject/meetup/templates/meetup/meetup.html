@@ -1,2 +1,28 @@
-{% block content%}
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Meetup Seattle Meetings:</h1>
+<table class='table'>
+  <tr>
+    <th> Meeting Name </th>
+    <th> Meeting Date </th>
+    <th> Meeting Time </th>
+    <th> Meeting Location </th>
+    <th> Meeting ID </th>
+</tr>
+
+ {% for m in meeting %}
+   <tr>
+      <td>
+           {{ m.meeting_title }}</a></td>      
+      <td> {{ m.meeting_date     }} </td>
+      <td> {{ m.meeting_time     }} </td>
+      <td> {{ m.meeting_location }} </td>
+      <td> {{ m.meeting_id }} </td>
+   </tr>
+ {% endfor %}
+
+
+</table>
+{% endblock %}
 {% endblock content%}

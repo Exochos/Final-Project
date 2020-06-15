@@ -25,7 +25,8 @@ def getactivity(request):
 
 
 
-
+def login(request):
+    return render(request, 'registration/login.html')
 
 def loginmessage(request):
     return render(request, 'meetup/loginmessage.html')
