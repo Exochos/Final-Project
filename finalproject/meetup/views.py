@@ -23,7 +23,7 @@ def meetupdetails(request,id):
     context = {
         "object": obj
     }
-    return render(request, "meetup/meetupdetail.html", context)
+    return render(request, "meetup/meetupdetail.html", context=context)
 
 
 # new meetup form with login
