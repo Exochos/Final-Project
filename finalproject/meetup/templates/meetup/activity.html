@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Meetup Seattle Activities:</h1>
+<table class='table'>
+  <tr>
+    <th> Activity Name </th>
+    <th> Activity Type </th>
+    <th> Activity Description </th>
+</tr>
+
+ {% for m in activity_list %}
+   <tr>
+      <td>{{ m.activity_name }}</td>   
+      <td> {{ m.activity_type     }} </td>
+      <td> {{ m.activity_desc     }} </td>
+   </tr>
+ {% endfor %}
+
+
+</table>
+{% endblock content%}

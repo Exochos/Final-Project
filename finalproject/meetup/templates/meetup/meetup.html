@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Meetup Seattle Meetings:</h1>
+<table class='table'>
+  <tr>
+    <th> MeetUp Name </th>
+    <th> MeetUp Date </th>
+    <th> MeetUp Time </th>
+    <th> MeetUp Location </th>
+</tr>
+
+ {% for m in meetup_list %}
+   <tr>
+    <td><a href="{% url 'meetupdetails' id=meetup.id %}">{{ m.meetup_name }}</a></td>   
+      <td> {{ m.meetup_date     }} </td>
+      <td> {{ m.meetup_time     }} </td>
+      <td> {{ m.meetup_location }} </td>
+   </tr>
+ {% endfor %}
+
+
+</table>
+{% endblock content%}
