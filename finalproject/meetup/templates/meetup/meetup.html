@@ -4,25 +4,21 @@
 <h1>Meetup Seattle Meetings:</h1>
 <table class='table'>
   <tr>
-    <th> Meeting Name </th>
-    <th> Meeting Date </th>
-    <th> Meeting Time </th>
-    <th> Meeting Location </th>
-    <th> Meeting ID </th>
+    <th> MeetUp Name </th>
+    <th> MeetUp Date </th>
+    <th> MeetUp Time </th>
+    <th> MeetUp Location </th>
 </tr>
 
- {% for m in meeting %}
+ {% for m in meetup_list %}
    <tr>
-      <td>
-           {{ m.meeting_title }}</a></td>      
-      <td> {{ m.meeting_date     }} </td>
-      <td> {{ m.meeting_time     }} </td>
-      <td> {{ m.meeting_location }} </td>
-      <td> {{ m.meeting_id }} </td>
+    <td><a href="{% url 'meetupdetails' id=meetup.id %}">{{ m.meetup_name }}</a></td>   
+      <td> {{ m.meetup_date     }} </td>
+      <td> {{ m.meetup_time     }} </td>
+      <td> {{ m.meetup_location }} </td>
    </tr>
  {% endfor %}
 
 
 </table>
-{% endblock %}
 {% endblock content%}
