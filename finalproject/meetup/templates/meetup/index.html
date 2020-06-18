@@ -38,24 +38,17 @@
 								<li>
 									<a href="#"> Login - Register </a>
 									<ul>
-										<li><a href="#">Lorem ipsum dolor</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam dolore nisl</a></li>
-										<li>
-											<a href="#">And a submenu &hellip;</a>
-											<ul>
-												<li><a href="#">Lorem ipsum dolor</a></li>
-												<li><a href="#">Phasellus consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Veroeros feugiat</a></li>
+										<li><a href="{% url 'login' %}">Login</a></li>
+										<li><a href="{% url 'meetup' %}">Meetup</a></li>
+                                        <li><a href="{% url 'newmeetup' }">New Meetup</a></li>
+                                        <li><a href="{% url 'newactivity' }">New Activity</a></li>
+                                        <li><a href="{% url 'loginmessage' %}"></a>Login Message</li>
+                                        <li><a href="{% url 'logoutmessage' %}"></a>Logout Message</li>
+
+                                            
+                                        </li>
 									</ul>
 								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
 							</ul>
 						</nav>
 
@@ -64,10 +57,11 @@
 			<!-- Banner -->
 				<section id="banner">
 					<header>
-						<h2>Hi. You're looking at <strong>Helios</strong>.</h2>
+						<h2>Hi. Welcome to <strong>Meetup Seattle</strong>.</h2>
 						<p>
-							A (free) responsive site template by <a href="http://html5up.net">HTML5 UP</a>.
-							Built with HTML5/CSS3 and released under the <a href="http://html5up.net/license">CCA</a> license.
+                        {% block content %}
+
+                        {% endblock content %}
 						</p>
 					</header>
 				</section>
