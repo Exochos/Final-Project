@@ -35,7 +35,7 @@ def newmeetup(request):
         if form.is_valid():
             post=form.save(commit=True)
             post.save()
-            form=MeetUpForm
+            form=MeetUpForm()
     else:
         form=MeetUpForm()
     return render(request, 'meetup/newmeetup.html', {'form': form})
