@@ -23,7 +23,7 @@ def meetupdetails(request,id):
     context = {
         "object": obj
     }
-    return render(request, "meetup/meetupdetail.html", context=context)
+    return render(request, "meetup/meetupdetails.html", context=context)
 
 
 # new meetup form with login
@@ -36,8 +36,8 @@ def newmeetup(request):
             post=form.save(commit=True)
             post.save()
             form=MeetUpForm
-        else:
-            form=MeetUpForm()
+    else:
+        form=MeetUpForm()
     return render(request, 'meetup/newmeetup.html', {'form': form})
 
 # Activity login form required
@@ -50,8 +50,8 @@ def newactivity(request):
             post=form.save(commit=True)
             post.save()
             form=ActivityForm()
-        else:
-            form=ActivityForm()
+    else:
+        form=ActivityForm()
     return render(request, 'meetup/newactivity.html', {'form': form})
 
 
