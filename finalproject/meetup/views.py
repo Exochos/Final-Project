@@ -18,7 +18,7 @@ def getactivity(request):
     return render (request, 'meetup/activity.html',{'activity_list': activity_list,})
 
 # Meetup details form
-def meetupdetail(request,id):
+def meetupdetails(request,id):
     obj = get_object_or_404(MeetUp, pk=id)
     context = {
         "object": obj
