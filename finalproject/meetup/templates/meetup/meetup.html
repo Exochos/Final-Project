@@ -12,7 +12,11 @@
 
  {% for m in meetup_list %}
    <tr>
+<<<<<<< HEAD
       <td><a href="{% url 'meetupdetails' id=m.id %}">{{ m.meetup_name }}</a></td>
+=======
+    <td><a href="{% url 'meetupdetails' id=m.id %}">{{ m.meetup_name }}</a></td>   
+>>>>>>> 3efdafa80f20c323397926f04a14d1de1360c4fc
       <td> {{ m.meetup_date     }} </td>
       <td> {{ m.meetup_time     }} </td>
       <td> {{ m.meetup_location }} </td>
